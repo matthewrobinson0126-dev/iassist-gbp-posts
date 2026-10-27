@@ -440,7 +440,37 @@ def icon(draw, key, box, color):
             draw.ellipse([bx + ox - 13, by + oy - 13, bx + ox + 13, by + oy + 13], fill=color)
 
 
-def render(key, label, post, out_path):
+def slugify(text):
+    text = text.lower().replace("&", "and").replace("+", "plus")
+    return re.sub(r"[^a-z0-9]+", "-", text).strip("-")[:90]
+
+
+SHOP_GPS = (-26.1367857, 28.1159056)  # Shop 4, Silvercrest Shopping Centre
+
+
+def dms(value):
+    value = abs(value)
+    d = int(value)
+    m = int((value - d) * 60)
+    return (float(d), float(m), round((value - d - m / 60) * 3600, 2))
+
+
+def image_exif(meta):
+    """Title, description (alt text), keywords, author, copyright and the shop's location."""
+    exif = Image.Exif()
+    utf16 = lambda s: s.encode("utf-16-le") + b"\x00\x00"
+    exif[0x010E] = meta["alt"]                          # ImageDescription
+    exif[0x013B] = "Matthew Robinson, iAssist Repair"   # Artist
+    exif[0x8298] = f"Copyright {datetime.now(SAST).year} iAssist Repair, iassist.net.za"  # Copyright
+    exif[0x9C9B] = utf16(meta["title"])                 # XPTitle
+    exif[0x9C9C] = utf16(meta["alt"])                   # XPComment
+    exif[0x9C9E] = utf16(";".join(meta["keywords"]))    # XPKeywords
+    lat, lon = SHOP_GPS
+    exif.get_ifd(0x8825).update({1: "S" if lat < 0 else "N", 2: dms(lat), 3: "E" if lon > 0 else "W", 4: dms(lon)})
+    return exif
+
+
+def render(key, label, post, out_path, meta=None):
     W, H = 1200, 900
     img = Image.new("RGB", (W, H), SLATE)
     d = ImageDraw.Draw(img)
@@ -493,7 +523,8 @@ def render(key, label, post, out_path):
 
     d.rectangle([0, H - 72, W, H], fill=(20, 25, 30))
     d.text((64, H - 54), ADDRESS, font=font(28, 400), fill=TAN_LIGHT)
-    img.save(out_path, "JPEG", quality=90)
+    extra = {"exif": image_exif(meta)} if meta else {}
+    img.save(out_path, "JPEG", quality=90, **extra)
 
 
 # ---------- phases ----------
@@ -565,8 +596,15 @@ def build():
 
     today = now.strftime("%Y-%m-%d")
     POSTS_DIR.mkdir(exist_ok=True)
-    img_name = f"{today}-{name}.jpg"
-    render(device or key, label, post, POSTS_DIR / img_name)
+    if device:
+        area = suburb_of(url, facts["title"])
+        subject = f"{dict(APPLE_DEVICES)[device]} repair {area}" if "/blogs/" not in url else post["headline"]
+    else:
+        subject = f"{post['headline']} Johannesburg"
+    img_name = f"{today}-{slugify(subject)}.jpg"
+    alt = f"{post['headline']} at iAssist Repair, Shop 4, Silvercrest Shopping Centre, Silvamonte, Johannesburg"
+    render(device or key, label, post, POSTS_DIR / img_name,
+           meta={"title": post["headline"], "alt": alt, "keywords": [post["headline"], label, "iAssist Repair", "Johannesburg"]})
 
     payload = {
         "topic": post["headline"][:58],
@@ -574,6 +612,7 @@ def build():
         "image_url": f"{PAGES_BASE}/posts/{img_name}",
         "cta_type": post["cta"],
         "cta_url": utm(CONTACT if post["cta"] == "BOOK" else url, name),
+        "image_alt": alt,
     }
     POST.write_text(json.dumps(payload, indent=2) + "\n")
 
