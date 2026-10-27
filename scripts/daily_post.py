@@ -32,7 +32,9 @@ PAGES_BASE = os.environ.get("PAGES_BASE", "https://matthewrobinson0126-dev.githu
 SAST = timezone(timedelta(hours=2))
 UA = {"User-Agent": "iAssist-GBP-poster/1.0 (+https://iassist.net.za)"}
 
-# Rotation order - one group per day, in this order, then round again.
+# Device groups. On device days the next group is picked in proportion to how many pages it
+# has (smooth weighted round-robin), so every device page is covered in the same overall cycle
+# while the groups stay mixed.
 GROUPS = [
     ("iphone", "iPhone Repairs"),
     ("playstation", "PlayStation Repairs"),
@@ -43,8 +45,13 @@ GROUPS = [
     ("watch", "Apple Watch Repairs"),
     ("switch", "Nintendo Switch Repairs"),
     ("desktop", "iMac & Mac mini Repairs"),
-    ("areas", "Areas We Serve"),
 ]
+MIN_WEIGHT = 15
+AREAS_LABEL = "Areas We Serve"
+LOCATION_DAYS = {1, 3, 5}  # Tuesday, Thursday, Saturday (Monday=0)
+# Suburb pages about Apple repair are paired with each of these in turn.
+APPLE_DEVICES = [("iphone", "iPhone"), ("ipad", "iPad"), ("macbook", "MacBook"),
+                 ("watch", "Apple Watch"), ("desktop", "iMac & Mac mini")]
 SKIP_SLUGS = {"contact", "shop", "matthew-robinson"}
 
 # Brand (from the live theme): dark slate, tan buttons, white text, Jost.
@@ -76,8 +83,10 @@ def sitemap_urls():
 
 def group_of(url):
     path = url.split(SITE, 1)[-1]
+    if path.startswith("/blogs/locations/"):
+        return "areas"
     if path.startswith("/blogs/"):
-        return "areas"  # location blog posts
+        return None  # general news/advice blogs aren't part of the rotation
     slug = path.rsplit("/", 1)[-1]
     if slug in SKIP_SLUGS:
         return None
@@ -120,34 +129,102 @@ def load_state():
         return {"day": 0, "posted": {}, "history": []}
 
 
-def pick_topic(state):
+def pages_by_group():
     by_group = {}
     for url in sitemap_urls():
         g = group_of(url)
         if g:
             by_group.setdefault(g, []).append(url)
+    return by_group
+
+
+def suburb_of(url, title=""):
+    slug = slug_of(url)
+    for prefix in ("apple-repair-", "iphone-repair-"):
+        if slug.startswith(prefix):
+            name = slug[len(prefix):].replace("-", " ").title()
+            return name.replace("Cbd", "CBD")
+    return title or slug.replace("-", " ").title()
+
+
+def blog_device(slug):
+    """Location blogs are already about one device - read it from the start of the slug."""
+    for prefix, key in (("apple-watch", "watch"), ("ipad", "ipad"), ("macbook", "macbook"),
+                        ("imac", "desktop"), ("mac-mini", "desktop")):
+        if slug.startswith(prefix):
+            return key
+    return "iphone"
+
+
+def location_combos(areas):
+    """Every (area page, device) pair, in the order they get posted."""
+    multi = sorted(u for u in areas if "/pages/" in u and not slug_of(u).startswith("iphone-repair-"))
+    iphone = sorted(u for u in areas if slug_of(u).startswith("iphone-repair-"))
+    iphone = iphone[len(iphone) // 2:] + iphone[:len(iphone) // 2]  # so the same suburb isn't posted twice in a row
+    blogs = sorted(u for u in areas if "/blogs/" in u)
+    first = []
+    for i in range(max(len(multi), len(iphone), len(blogs))):
+        if i < len(multi):
+            first.append((multi[i], APPLE_DEVICES[i % len(APPLE_DEVICES)][0]))
+        if i < len(iphone):
+            first.append((iphone[i], "iphone"))
+        if i < len(blogs):
+            first.append((blogs[i], blog_device(slug_of(blogs[i]))))
+    later = [(u, APPLE_DEVICES[(i + r) % len(APPLE_DEVICES)][0])
+             for r in range(1, len(APPLE_DEVICES)) for i, u in enumerate(multi)]
+    return first + later
+
+
+def pick_location(state, areas):
+    combos = location_combos(areas)
+    done = set(state.setdefault("areas_done", []))
+    fresh = [c for c in combos if f"{slug_of(c[0])}--{c[1]}" not in done]
+    if not fresh:  # every suburb has had every device - start again
+        state["areas_done"], fresh = [], combos
+    url, device = fresh[0]
+    state["areas_done"].append(f"{slug_of(url)}--{device}")
+    return url, device
+
+
+def pick_device_group(state, by_group):
+    """Smooth weighted round-robin: bigger groups come up more often, never in long runs.
+    Small groups (consoles, controllers) get a minimum weight so they still come round often."""
+    live = [(k, l) for k, l in GROUPS if by_group.get(k)]
+    weight = {k: max(len(by_group[k]), MIN_WEIGHT) for k, _ in live}
+    total = sum(weight.values())
+    credits = state.setdefault("credits", {})
+    for k, _ in live:
+        credits[k] = credits.get(k, 0) + weight[k]
+    key, label = max(live, key=lambda g: credits[g[0]])
+    credits[key] -= total
+    return key, label
+
+
+def pick_topic(state, location_day):
+    """Returns (group, label, url, device). device is set only for location posts."""
+    by_group = pages_by_group()
     wanted = os.environ.get("PAGE", "").strip().rstrip("/").rsplit("/", 1)[-1]
     if wanted:  # a specific page was asked for on a manual run
         for key, pages in by_group.items():
             for url in pages:
                 if slug_of(url) == wanted:
-                    return key, dict(GROUPS)[key], url
+                    if key == "areas":
+                        return key, AREAS_LABEL, url, os.environ.get("DEVICE") or "iphone"
+                    return key, dict(GROUPS)[key], url, None
         raise RuntimeError(f"Page '{wanted}' is not in the sitemap or not in a posting group")
-    for step in range(len(GROUPS)):
-        key, label = GROUPS[(state["day"] + step) % len(GROUPS)]
-        pages = by_group.get(key)
-        if not pages:
-            continue
-        done = set(state["posted"].get(key, []))
-        fresh = [u for u in pages if u not in done]
-        if not fresh:  # whole group used - start that group's next round
-            state["posted"][key] = []
-            fresh = pages
-        written = bank_slugs()
-        fresh.sort(key=lambda u: slug_of(u) not in written)  # pre-written posts go first
-        state["day"] += step
-        return key, label, fresh[0]
-    raise RuntimeError("No pages found in the sitemap")
+    if location_day and by_group.get("areas"):
+        url, device = pick_location(state, by_group["areas"])
+        return "areas", AREAS_LABEL, url, device
+    key, label = pick_device_group(state, by_group)
+    pages = by_group[key]
+    done = set(state["posted"].get(key, []))
+    fresh = [u for u in pages if u not in done]
+    if not fresh:  # whole group used - start that group's next round
+        state["posted"][key] = []
+        fresh = pages
+    written = bank_slugs()
+    fresh.sort(key=lambda u: slug_of(u) not in written)  # pre-written posts go first
+    return key, label, fresh[0], None
 
 
 # ---------- page reading ----------
@@ -238,6 +315,22 @@ def read_bank(slug):
         "price_from": fields.get("price", ""),
         "summary": body.strip(),
         "cta": "BOOK" if button == "book" else "LEARN_MORE",
+    }
+
+
+def write_location_fallback(url, device, facts):
+    """Plain area post from the page's own description, used if no post was written for it."""
+    dev = dict(APPLE_DEVICES)[device]
+    area = suburb_of(url, facts["title"])
+    headline = facts["title"] if "/blogs/" in url else f"{dev} Repairs for {area}"
+    return {
+        "headline": headline,
+        "subline": "Shop 4, Silvercrest Shopping Centre, Silvamonte",
+        "price_from": "",
+        "summary": f"Live or work in {area}? iAssist Repair handles {dev} repairs at our workshop in "
+                   f"Silvercrest Shopping Centre, Silvamonte.\n\n{facts['meta']}\n\n"
+                   "Every repair starts with a free diagnostic, so you know the cost before any work begins.",
+        "cta": "LEARN_MORE",
     }
 
 
@@ -444,43 +537,53 @@ def utm(url, slug):
 
 def build():
     state = load_state()
-    key, label, url = pick_topic(state)
+    now = datetime.now(SAST)
+    key, label, url, device = pick_topic(state, now.weekday() in LOCATION_DAYS)
     slug = slug_of(url)
+    name = f"{slug}--{device}" if device else slug  # bank file / image name
     facts = page_facts(url)
-    post, writer = read_bank(slug), "bank"
+    post, writer = read_bank(name) or (read_bank(slug) if device else None), "bank"
     if not post or not post["summary"]:
         writer = "claude"
         try:
             if not os.environ.get("ANTHROPIC_API_KEY"):
                 raise RuntimeError("no pre-written post and no ANTHROPIC_API_KEY")
-            post = write_with_claude(label, url, facts)
+            topic = f"{dict(APPLE_DEVICES)[device]} repairs for people in this area" if device else label
+            post = write_with_claude(topic, url, facts)
         except Exception as exc:
             print(f"::warning::Using the plain backup post ({type(exc).__name__}: {exc})")
-            post, writer = write_fallback(label, facts), "fallback"
+            post = write_location_fallback(url, device, facts) if device else write_fallback(label, facts)
+            writer = "fallback"
     post = clean(post, facts)
-    cta = choose_cta(datetime.now(SAST))
+    if device:
+        post["price_from"] = ""  # suburb pages list many prices; the picture shows device + area instead
+    cta = choose_cta(now)
     post["summary"] = set_ending(post["summary"], cta, post["cta"])
     post["cta"] = cta
-    left = len(bank_slugs() - {slug_of(h["page"]) for h in state["history"]} - {slug})
-    print(f"Post written by: {writer}. Pre-written posts not used yet: {left}")
+    used = {h.get("name", slug_of(h["page"])) for h in state["history"]} | {name}
+    print(f"Post written by: {writer}. Pre-written posts not used yet: {len(bank_slugs() - used)}")
 
-    today = datetime.now(SAST).strftime("%Y-%m-%d")
+    today = now.strftime("%Y-%m-%d")
     POSTS_DIR.mkdir(exist_ok=True)
-    img_name = f"{today}-{slug}.jpg"
-    render(key, label, post, POSTS_DIR / img_name)
+    img_name = f"{today}-{name}.jpg"
+    render(device or key, label, post, POSTS_DIR / img_name)
 
     payload = {
         "topic": post["headline"][:58],
         "summary": post["summary"],
         "image_url": f"{PAGES_BASE}/posts/{img_name}",
         "cta_type": post["cta"],
-        "cta_url": utm(CONTACT if post["cta"] == "BOOK" else url, slug),
+        "cta_url": utm(CONTACT if post["cta"] == "BOOK" else url, name),
     }
     POST.write_text(json.dumps(payload, indent=2) + "\n")
 
-    state["posted"].setdefault(key, []).append(url)
-    state["day"] += 1
-    state["history"] = (state["history"] + [{"date": today, "group": key, "page": url, "writer": writer}])[-400:]
+    if device:
+        if name not in state.setdefault("areas_done", []):  # manual runs skip pick_location
+            state["areas_done"].append(name)
+    else:
+        state["posted"].setdefault(key, []).append(url)
+    entry = {"date": today, "group": key, "page": url, "name": name, "writer": writer}
+    state["history"] = (state["history"] + [entry])[-400:]
     STATE.write_text(json.dumps(state, indent=2) + "\n")
     print(json.dumps(payload, indent=2))
 
