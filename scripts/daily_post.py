@@ -27,6 +27,7 @@ STATE = ROOT / "state.json"
 POST = ROOT / "post.json"
 POSTS_DIR = ROOT / "posts"
 ASSETS = ROOT / "assets"
+BANK = ROOT / "bank"  # pre-written posts, one <page-slug>.txt each (synced from Google Drive)
 PAGES_BASE = os.environ.get("PAGES_BASE", "https://matthewrobinson0126-dev.github.io/iassist-gbp-posts")
 SAST = timezone(timedelta(hours=2))
 UA = {"User-Agent": "iAssist-GBP-poster/1.0 (+https://iassist.net.za)"}
@@ -104,6 +105,14 @@ def group_of(url):
     return None  # general pages (shop, android, etc.) stay out of the rotation
 
 
+def slug_of(url):
+    return url.rstrip("/").rsplit("/", 1)[-1]
+
+
+def bank_slugs():
+    return {p.stem for p in BANK.glob("*.txt")}
+
+
 def load_state():
     try:
         return json.loads(STATE.read_text())
@@ -127,6 +136,8 @@ def pick_topic(state):
         if not fresh:  # whole group used - start that group's next round
             state["posted"][key] = []
             fresh = pages
+        written = bank_slugs()
+        fresh.sort(key=lambda u: slug_of(u) not in written)  # pre-written posts go first
         state["day"] += step
         return key, label, fresh[0]
     raise RuntimeError("No pages found in the sitemap")
@@ -200,6 +211,27 @@ def write_with_claude(label, url, facts):
         raise RuntimeError(f"Claude stopped with {msg.stop_reason}")
     text = next(b.text for b in msg.content if b.type == "text")
     return json.loads(text)
+
+
+def read_bank(slug):
+    """Read bank/<slug>.txt:  'Field: value' lines, a line of ---, then the post text."""
+    path = BANK / f"{slug}.txt"
+    if not path.exists():
+        return None
+    head, _, body = path.read_text(encoding="utf-8").partition("\n---")
+    fields = {}
+    for line in head.splitlines():
+        name, sep, value = line.partition(":")
+        if sep:
+            fields[name.strip().lower()] = value.strip()
+    button = fields.get("button", "").lower().replace(" ", "")
+    return {
+        "headline": fields.get("headline", ""),
+        "subline": fields.get("subline", ""),
+        "price_from": fields.get("price", ""),
+        "summary": body.strip(),
+        "cta": "BOOK" if button == "book" else "LEARN_MORE",
+    }
 
 
 def write_fallback(label, facts):
@@ -374,17 +406,21 @@ def utm(url, slug):
 def build():
     state = load_state()
     key, label, url = pick_topic(state)
-    slug = url.rstrip("/").rsplit("/", 1)[-1]
+    slug = slug_of(url)
     facts = page_facts(url)
-    writer = "claude"
-    try:
-        if not os.environ.get("ANTHROPIC_API_KEY"):
-            raise RuntimeError("ANTHROPIC_API_KEY not set")
-        post = write_with_claude(label, url, facts)
-    except Exception as exc:
-        print(f"::warning::Claude unavailable ({type(exc).__name__}: {exc}); using the plain fallback post")
-        post, writer = write_fallback(label, facts), "fallback"
+    post, writer = read_bank(slug), "bank"
+    if not post or not post["summary"]:
+        writer = "claude"
+        try:
+            if not os.environ.get("ANTHROPIC_API_KEY"):
+                raise RuntimeError("no pre-written post and no ANTHROPIC_API_KEY")
+            post = write_with_claude(label, url, facts)
+        except Exception as exc:
+            print(f"::warning::Using the plain backup post ({type(exc).__name__}: {exc})")
+            post, writer = write_fallback(label, facts), "fallback"
     post = clean(post, facts)
+    left = len(bank_slugs() - {slug_of(h["page"]) for h in state["history"]} - {slug})
+    print(f"Post written by: {writer}. Pre-written posts not used yet: {left}")
 
     today = datetime.now(SAST).strftime("%Y-%m-%d")
     POSTS_DIR.mkdir(exist_ok=True)
