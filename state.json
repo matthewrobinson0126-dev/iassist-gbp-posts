@@ -1,8 +1,11 @@
 {
-  "day": 1,
+  "day": 2,
   "posted": {
     "iphone": [
       "https://iassist.net.za/pages/iphone-11-pro-repair"
+    ],
+    "playstation": [
+      "https://iassist.net.za/pages/playstation-repairs"
     ]
   },
   "history": [
@@ -10,6 +13,12 @@
       "date": "2026-10-27",
       "group": "iphone",
       "page": "https://iassist.net.za/pages/iphone-11-pro-repair",
+      "writer": "bank"
+    },
+    {
+      "date": "2026-10-27",
+      "group": "playstation",
+      "page": "https://iassist.net.za/pages/playstation-repairs",
       "writer": "bank"
     }
   ]
