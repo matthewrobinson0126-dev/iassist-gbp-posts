@@ -621,10 +621,45 @@ def build():
             state["areas_done"].append(name)
     else:
         state["posted"].setdefault(key, []).append(url)
-    entry = {"date": today, "group": key, "page": url, "name": name, "writer": writer}
+    entry = {"date": today, "group": key, "page": url, "name": name, "writer": writer,
+             "headline": post["headline"], "button": post["cta"], "image": img_name}
     state["history"] = (state["history"] + [entry])[-400:]
     STATE.write_text(json.dumps(state, indent=2) + "\n")
+    write_log(state["history"])
     print(json.dumps(payload, indent=2))
+
+
+BUTTON_NAMES = {"LEARN_MORE": "Learn more", "CALL": "Call now", "BOOK": "Book"}
+
+
+def write_log(history):
+    """index.html on GitHub Pages: every post so far, newest first, with its picture."""
+    esc = htmlmod.escape
+    cards = []
+    for h in reversed(history):
+        img = f'<img src="posts/{esc(h["image"])}" alt="{esc(h.get("headline", ""))}" loading="lazy">' if h.get("image") else ""
+        cards.append(
+            f'<article>{img}<div><time>{esc(h["date"])}</time>'
+            f'<h2>{esc(h.get("headline") or slug_of(h["page"]))}</h2>'
+            f'<p>Button: {esc(BUTTON_NAMES.get(h.get("button"), "-"))} · '
+            f'<a href="{esc(h["page"])}">{esc(h["page"].split(SITE, 1)[-1])}</a></p></div></article>')
+    (ROOT / "index.html").write_text(f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iAssist Google posts</title><meta name="robots" content="noindex">
+<style>
+body{{margin:0;font:16px/1.5 system-ui,sans-serif;background:#1c2228;color:#fff}}
+main{{max-width:900px;margin:0 auto;padding:24px 16px}}
+h1{{font-weight:600}} p.lead{{color:#c2b7ac}}
+article{{display:flex;gap:16px;background:#323841;border-radius:10px;padding:12px;margin:12px 0;align-items:center}}
+article img{{width:220px;max-width:40%;border-radius:6px}}
+time{{color:#c2b7ac;font-size:14px}} h2{{margin:2px 0 6px;font-size:19px}}
+a{{color:#c2b7ac}} @media (max-width:600px){{article{{flex-direction:column;align-items:flex-start}} article img{{max-width:100%;width:100%}}}}
+</style></head><body><main>
+<h1>iAssist Repair – Google posts</h1>
+<p class="lead">{len(history)} posts so far, newest first. Updated every morning after the 08:00 post.</p>
+{"".join(cards)}
+</main></body></html>
+""", encoding="utf-8")
 
 
 def send():

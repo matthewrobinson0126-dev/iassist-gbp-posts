@@ -13,13 +13,19 @@
       "date": "2026-10-27",
       "group": "iphone",
       "page": "https://iassist.net.za/pages/iphone-11-pro-repair",
-      "writer": "bank"
+      "writer": "bank",
+      "headline": "iPhone 11 Pro Repair",
+      "button": "LEARN_MORE",
+      "image": "2026-10-27-iphone-11-pro-repair.jpg"
     },
     {
       "date": "2026-10-27",
       "group": "playstation",
       "page": "https://iassist.net.za/pages/playstation-repairs",
-      "writer": "bank"
+      "writer": "bank",
+      "headline": "PS5 & PS4 Repairs",
+      "button": "CALL",
+      "image": "2026-10-27-playstation-repairs.jpg"
     }
   ]
 }
