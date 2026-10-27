@@ -405,6 +405,33 @@ def render(key, label, post, out_path):
 
 # ---------- phases ----------
 
+CONTACT = f"{SITE}/pages/contact"
+CTA_ENDINGS = {
+    "LEARN_MORE": "Tap Learn more for prices and details.",
+    "CALL": "Tap Call now to speak to us about your repair.",
+    "BOOK": "Tap Book to arrange your repair with us.",
+}
+
+
+def choose_cta(state, now):
+    """Mondays: Book (contact page). Every 3rd post: Call now. Otherwise: Learn more."""
+    if now.weekday() == 0:
+        return "BOOK"
+    if (len(state["history"]) + 1) % 3 == 0:
+        return "CALL"
+    return "LEARN_MORE"
+
+
+def set_ending(summary, cta, original_cta):
+    """Make the last 'Tap ...' line match the button actually shown."""
+    if cta == original_cta and summary.rstrip().split("\n")[-1].startswith("Tap "):
+        return summary
+    paras = summary.rstrip().split("\n\n")
+    if paras[-1].startswith("Tap "):
+        paras = paras[:-1]
+    return "\n\n".join(paras + [CTA_ENDINGS[cta]])
+
+
 def utm(url, slug):
     sep = "&" if "?" in url else "?"
     return f"{url}{sep}utm_source=google&utm_medium=organic&utm_campaign=gbp_post&utm_content={slug}"
@@ -426,6 +453,9 @@ def build():
             print(f"::warning::Using the plain backup post ({type(exc).__name__}: {exc})")
             post, writer = write_fallback(label, facts), "fallback"
     post = clean(post, facts)
+    cta = choose_cta(state, datetime.now(SAST))
+    post["summary"] = set_ending(post["summary"], cta, post["cta"])
+    post["cta"] = cta
     left = len(bank_slugs() - {slug_of(h["page"]) for h in state["history"]} - {slug})
     print(f"Post written by: {writer}. Pre-written posts not used yet: {left}")
 
@@ -439,7 +469,7 @@ def build():
         "summary": post["summary"],
         "image_url": f"{PAGES_BASE}/posts/{img_name}",
         "cta_type": post["cta"],
-        "cta_url": utm(url, slug),
+        "cta_url": utm(CONTACT if post["cta"] == "BOOK" else url, slug),
     }
     POST.write_text(json.dumps(payload, indent=2) + "\n")
 
