@@ -205,11 +205,10 @@ def write_with_claude(label, url, facts):
 def write_fallback(label, facts):
     """Plain post from the page's own title + description, used if Claude is unavailable."""
     title = facts["title"] or label
-    price = re.search(r"R\s?\d[\d,  ]*", facts["text"])
     return {
         "headline": title,
         "subline": label,
-        "price_from": price.group(0).replace(" ", "").replace(" ", "") if price else "",
+        "price_from": "",  # can't tell a "from" price apart from other numbers without Claude
         "summary": f"{title} at iAssist Repair, Silvercrest Shopping Centre.\n\n{facts['meta']}\n\n"
                    "Pop in or book online - we'll check your device and quote before any work starts.",
         "cta": "LEARN_MORE",
@@ -356,8 +355,9 @@ def render(key, label, post, out_path):
         pf = font(40, 600)
         ptxt = f"From {post['price_from']}"
         pw = int(d.textlength(ptxt, font=pf)) + 56
-        d.rounded_rectangle([64, 712, 64 + pw, 776], 10, fill=TAN)
-        d.text((92, 718), ptxt, font=pf, fill=SLATE)
+        py = min(max(712, y + 56), 744)
+        d.rounded_rectangle([64, py, 64 + pw, py + 64], 10, fill=TAN)
+        d.text((92, py + 6), ptxt, font=pf, fill=SLATE)
 
     d.rectangle([0, H - 72, W, H], fill=(20, 25, 30))
     d.text((64, H - 54), ADDRESS, font=font(28, 400), fill=TAN_LIGHT)
