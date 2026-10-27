@@ -48,7 +48,8 @@ GROUPS = [
 ]
 MIN_WEIGHT = 15
 AREAS_LABEL = "Areas We Serve"
-LOCATION_DAYS = {1, 3, 5}  # Tuesday, Thursday, Saturday (Monday=0)
+# Two posts a day: the 08:00 run posts a device page, the 13:00 run posts a location.
+SLOT = os.environ.get("SLOT", "device").strip().lower()
 # Suburb pages about Apple repair are paired with each of these in turn.
 APPLE_DEVICES = [("iphone", "iPhone"), ("ipad", "iPad"), ("macbook", "MacBook"),
                  ("watch", "Apple Watch"), ("desktop", "iMac & Mac mini")]
@@ -569,7 +570,7 @@ def utm(url, slug):
 def build():
     state = load_state()
     now = datetime.now(SAST)
-    key, label, url, device = pick_topic(state, now.weekday() in LOCATION_DAYS)
+    key, label, url, device = pick_topic(state, SLOT == "location")
     slug = slug_of(url)
     name = f"{slug}--{device}" if device else slug  # bank file / image name
     facts = page_facts(url)
@@ -588,7 +589,9 @@ def build():
     post = clean(post, facts)
     if device:
         post["price_from"] = ""  # suburb pages list many prices; the picture shows device + area instead
-    cta = choose_cta(now)
+    cta = choose_cta(now) if not device else (os.environ.get("BUTTON", "").strip().upper() or "LEARN_MORE")
+    if cta not in CTA_ENDINGS:
+        cta = "LEARN_MORE"  # location posts send people to the suburb page
     post["summary"] = set_ending(post["summary"], cta, post["cta"])
     post["cta"] = cta
     used = {h.get("name", slug_of(h["page"])) for h in state["history"]} | {name}

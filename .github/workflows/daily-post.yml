@@ -2,9 +2,15 @@ name: Daily Google post
 
 on:
   schedule:
-    - cron: "0 6 * * *"   # 08:00 South Africa time
+    - cron: "0 6 * * *"    # 08:00 South Africa time - device post
+    - cron: "0 11 * * *"   # 13:00 South Africa time - location post
   workflow_dispatch:
     inputs:
+      slot:
+        description: "Which kind of post"
+        type: choice
+        options: [device, location]
+        default: device
       send:
         description: "Send to Google (untick to only make the post and image)"
         type: boolean
@@ -44,6 +50,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PAGE: ${{ inputs.page }}
           BUTTON: ${{ inputs.button }}
+          SLOT: ${{ github.event.schedule == '0 11 * * *' && 'location' || inputs.slot || 'device' }}
         run: python scripts/daily_post.py build
 
       - name: Save image and progress
@@ -52,6 +59,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add posts state.json post.json index.html
           git commit -m "Post for $(TZ=Africa/Johannesburg date +%F)"
+          git pull --rebase
           git push
 
       - name: Send to Google Business Profile (via Make.com)
