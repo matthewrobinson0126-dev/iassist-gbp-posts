@@ -406,6 +406,7 @@ def render(key, label, post, out_path):
 # ---------- phases ----------
 
 CONTACT = f"{SITE}/pages/contact"
+CALL_DAY = datetime(2026, 10, 29).date()  # first Call now day; then every 3rd day after it
 CTA_ENDINGS = {
     "LEARN_MORE": "Tap Learn more for prices and details.",
     "CALL": "Tap Call now to speak to us about your repair.",
@@ -413,11 +414,15 @@ CTA_ENDINGS = {
 }
 
 
-def choose_cta(state, now):
-    """Mondays: Book (contact page). Every 3rd post: Call now. Otherwise: Learn more."""
+def choose_cta(now):
+    """Mondays: Book (contact page). Every 3rd day: Call now. Otherwise: Learn more.
+    Goes by the calendar, so extra manual posts don't shift the rhythm."""
+    forced = os.environ.get("BUTTON", "").strip().upper()
+    if forced in CTA_ENDINGS:
+        return forced
     if now.weekday() == 0:
         return "BOOK"
-    if (len(state["history"]) + 1) % 3 == 0:
+    if now.date().toordinal() % 3 == CALL_DAY.toordinal() % 3:
         return "CALL"
     return "LEARN_MORE"
 
@@ -453,7 +458,7 @@ def build():
             print(f"::warning::Using the plain backup post ({type(exc).__name__}: {exc})")
             post, writer = write_fallback(label, facts), "fallback"
     post = clean(post, facts)
-    cta = choose_cta(state, datetime.now(SAST))
+    cta = choose_cta(datetime.now(SAST))
     post["summary"] = set_ending(post["summary"], cta, post["cta"])
     post["cta"] = cta
     left = len(bank_slugs() - {slug_of(h["page"]) for h in state["history"]} - {slug})
