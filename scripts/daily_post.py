@@ -126,6 +126,13 @@ def pick_topic(state):
         g = group_of(url)
         if g:
             by_group.setdefault(g, []).append(url)
+    wanted = os.environ.get("PAGE", "").strip().rstrip("/").rsplit("/", 1)[-1]
+    if wanted:  # a specific page was asked for on a manual run
+        for key, pages in by_group.items():
+            for url in pages:
+                if slug_of(url) == wanted:
+                    return key, dict(GROUPS)[key], url
+        raise RuntimeError(f"Page '{wanted}' is not in the sitemap or not in a posting group")
     for step in range(len(GROUPS)):
         key, label = GROUPS[(state["day"] + step) % len(GROUPS)]
         pages = by_group.get(key)

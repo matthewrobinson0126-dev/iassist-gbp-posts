@@ -9,6 +9,10 @@ on:
         description: "Send to Google (untick to only make the post and image)"
         type: boolean
         default: true
+      page:
+        description: "Optional: post this page instead of the next one (e.g. iphone-11-pro-repair)"
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -33,6 +37,7 @@ jobs:
       - name: Write the post and draw the image
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PAGE: ${{ inputs.page }}
         run: python scripts/daily_post.py build
 
       - name: Save image and progress
