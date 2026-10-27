@@ -1,0 +1,15 @@
+Page: https://iassist.net.za/pages/mac-mini-macos-upgrade
+Headline: Mac mini macOS Upgrade via OpenCore
+Subline: Sonoma on a 2012 or 2014 Mac mini
+Price: R1,500
+Button: Learn more
+---
+Apple stopped updating your 2012 or 2014 Mac mini, but it can still run macOS Sonoma.
+
+We install it using OpenCore Legacy Patcher for a flat R1,500. An SSD is required first, so we also offer an SSD and OCLP bundle for R5,300.
+
+Visit our workshop at Silvercrest Shopping Centre in Silvamonte, or use our R300 Gauteng collection. We also accept repairs from anywhere in South Africa by courier.
+
+The diagnostic is free, you get the price before we start, and every repair carries a 6-month warranty.
+
+Tap Learn more for Mac mini macOS Upgrade via OpenCore prices and details.
