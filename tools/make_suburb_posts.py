@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT / "tools"))
 import daily_post as dp  # noqa: E402
+import offline  # noqa: E402,F401  (read pages from cache/pages.json)
 import gen_suburb as g  # noqa: E402
 
 plan = json.load(open(sys.argv[1]))

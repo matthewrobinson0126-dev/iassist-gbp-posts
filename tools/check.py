@@ -9,7 +9,9 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import daily_post as dp  # noqa: E402
+import offline  # noqa: E402,F401  (read pages from cache/pages.json)
 
 names = sys.argv[1:] or sorted(p.stem for p in dp.BANK.glob("*.txt"))
 facts_cache, problems = {}, []

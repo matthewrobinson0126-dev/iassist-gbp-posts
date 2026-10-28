@@ -15,7 +15,9 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import daily_post as dp  # noqa: E402
+import offline  # noqa: E402,F401  (read pages from cache/pages.json)
 
 days = int(sys.argv[1]) if len(sys.argv) > 1 else 150
 cache = dp.sitemap_urls()

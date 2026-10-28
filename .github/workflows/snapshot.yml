@@ -1,0 +1,37 @@
+name: Monthly page snapshot
+
+# Saves every page of iassist.net.za to cache/pages.json on the 1st of each month at 07:00 SAST,
+# two hours before the Claude maintenance agent runs (it has no internet access to the site).
+on:
+  schedule:
+    - cron: "0 5 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-post
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Save every page
+        run: python tools/snapshot.py
+
+      - name: Commit snapshot
+        run: |
+          git config user.name "iAssist post robot"
+          git config user.email "actions@users.noreply.github.com"
+          git add cache/pages.json
+          git commit -m "Page snapshot $(TZ=Africa/Johannesburg date +%F)" || exit 0
+          git pull --rebase
+          git push

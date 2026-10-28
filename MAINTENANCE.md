@@ -8,15 +8,18 @@ Matthew is not a coder and does not want to be asked anything — do the work, c
 
 ## Steps
 
-1. `git pull --rebase`. (No packages needed; the tools only use the Python standard library.)
+1. `git pull --rebase`. No packages are needed (standard library only).
+   **This cloud machine cannot reach iassist.net.za.** GitHub saves a snapshot of every page to
+   `cache/pages.json` on the 1st of each month, and all tools read from it automatically. To read a page,
+   run `python tools/page.py <slug-or-url>`. Don't try to fetch the website yourself.
 2. `python tools/plan.py 150 > /tmp/plan.json` and read it.
    - `missing`: topics in the next 150 days with no post written.
    - `needs_refresh`: posts the robot skipped because a price in them is no longer on the live page.
-3. **Refresh** every name in `needs_refresh`: re-read the live page (`Page:` line), rewrite the post with the
+3. **Refresh** every name in `needs_refresh`: read the page with `python tools/page.py <slug>`, rewrite the post with the
    current facts, then remove that name from `needs_refresh` in `state.json`.
 4. **Write** posts for `missing` items, soonest dates first. Aim to keep at least ~120 days covered.
    - `kind: suburb` → run `python tools/make_suburb_posts.py /tmp/plan.json` (automatic).
-   - `kind: page`, `iphone-suburb`, `blog` → write by hand (rules below). Fetch the page and use only its facts.
+   - `kind: page`, `iphone-suburb`, `blog` → write by hand (rules below). Read the page with `python tools/page.py <slug>` and use only its facts.
    If there is a lot, do the first ~60 days fully and as many more as you reasonably can; the robot falls back to a
    plain post for anything unwritten, so nothing breaks.
 5. `python tools/check.py <every name you wrote or refreshed>` — fix every problem it reports, re-run until clean.
