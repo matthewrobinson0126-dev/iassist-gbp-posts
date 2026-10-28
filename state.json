@@ -37,6 +37,16 @@
       "headline": "iPhone 11 Pro Max Repair",
       "button": "LEARN_MORE",
       "image": "2026-10-28-iphone-11-pro-max-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-10-28",
+      "group": "areas",
+      "page": "https://iassist.net.za/pages/apple-repair-alberton",
+      "name": "apple-repair-alberton--iphone",
+      "writer": "bank",
+      "headline": "iPhone Repairs for Alberton",
+      "button": "LEARN_MORE",
+      "image": "2026-10-28-iphone-repair-alberton.jpg"
     }
   ],
   "credits": {
@@ -49,5 +59,8 @@
     "watch": 29,
     "switch": 15,
     "desktop": 33
-  }
+  },
+  "areas_done": [
+    "apple-repair-alberton--iphone"
+  ]
 }
