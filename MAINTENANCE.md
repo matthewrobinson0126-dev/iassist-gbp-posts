@@ -8,7 +8,7 @@ Matthew is not a coder and does not want to be asked anything — do the work, c
 
 ## Steps
 
-1. `pip install pillow` (the scripts import it), then `git pull --rebase`.
+1. `git pull --rebase`. (No packages needed; the tools only use the Python standard library.)
 2. `python tools/plan.py 150 > /tmp/plan.json` and read it.
    - `missing`: topics in the next 150 days with no post written.
    - `needs_refresh`: posts the robot skipped because a price in them is no longer on the live page.

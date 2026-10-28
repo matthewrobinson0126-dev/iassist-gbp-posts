@@ -19,7 +19,10 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+try:
+    from PIL import Image, ImageDraw, ImageFont
+except ImportError:  # the maintenance tools in tools/ only plan and check posts; they never draw pictures
+    Image = ImageDraw = ImageFont = None
 
 SITE = "https://iassist.net.za"
 ROOT = Path(__file__).resolve().parent.parent
