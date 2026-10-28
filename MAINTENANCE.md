@@ -8,7 +8,7 @@ Matthew is not a coder and does not want to be asked anything — do the work, c
 
 ## Steps
 
-1. `git pull --rebase`. No packages are needed (standard library only).
+1. `git fetch origin main && git checkout -B main origin/main` (the checkout may start detached). No packages are needed (standard library only).
    **This cloud machine cannot reach iassist.net.za.** GitHub saves a snapshot of every page to
    `cache/pages.json` on the 1st of each month, and all tools read from it automatically. To read a page,
    run `python tools/page.py <slug-or-url>`. Don't try to fetch the website yourself.
