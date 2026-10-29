@@ -7,6 +7,9 @@
     ],
     "playstation": [
       "https://iassist.net.za/pages/playstation-repairs"
+    ],
+    "ipad": [
+      "https://iassist.net.za/pages/ipad-10th-gen-repair"
     ]
   },
   "history": [
@@ -47,18 +50,28 @@
       "headline": "iPhone Repairs for Alberton",
       "button": "LEARN_MORE",
       "image": "2026-10-28-iphone-repair-alberton.jpg"
+    },
+    {
+      "date": "2026-10-29",
+      "group": "ipad",
+      "page": "https://iassist.net.za/pages/ipad-10th-gen-repair",
+      "name": "ipad-10th-gen-repair",
+      "writer": "bank",
+      "headline": "iPad 10th Gen Repair",
+      "button": "CALL",
+      "image": "2026-10-29-ipad-10th-gen-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": -231,
-    "playstation": 15,
-    "ipad": 58,
-    "controllers": 15,
-    "macbook": 51,
-    "xbox": 15,
-    "watch": 29,
-    "switch": 15,
-    "desktop": 33
+    "iphone": -168,
+    "playstation": 30,
+    "ipad": -178,
+    "controllers": 30,
+    "macbook": 102,
+    "xbox": 30,
+    "watch": 58,
+    "switch": 30,
+    "desktop": 66
   },
   "areas_done": [
     "apple-repair-alberton--iphone"
