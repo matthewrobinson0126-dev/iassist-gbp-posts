@@ -60,6 +60,16 @@
       "headline": "iPad 10th Gen Repair",
       "button": "CALL",
       "image": "2026-10-29-ipad-10th-gen-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-10-29",
+      "group": "areas",
+      "page": "https://iassist.net.za/pages/iphone-repair-linden",
+      "name": "iphone-repair-linden--iphone",
+      "writer": "bank",
+      "headline": "iPhone Repairs for Linden",
+      "button": "LEARN_MORE",
+      "image": "2026-10-29-iphone-repair-linden.jpg"
     }
   ],
   "credits": {
@@ -74,6 +84,7 @@
     "desktop": 66
   },
   "areas_done": [
-    "apple-repair-alberton--iphone"
+    "apple-repair-alberton--iphone",
+    "iphone-repair-linden--iphone"
   ]
 }
