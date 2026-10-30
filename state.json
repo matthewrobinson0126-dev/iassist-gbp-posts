@@ -10,6 +10,9 @@
     ],
     "ipad": [
       "https://iassist.net.za/pages/ipad-10th-gen-repair"
+    ],
+    "macbook": [
+      "https://iassist.net.za/pages/macbook-air-11-inch-repair"
     ]
   },
   "history": [
@@ -70,18 +73,28 @@
       "headline": "iPhone Repairs for Linden",
       "button": "LEARN_MORE",
       "image": "2026-10-29-iphone-repair-linden.jpg"
+    },
+    {
+      "date": "2026-10-30",
+      "group": "macbook",
+      "page": "https://iassist.net.za/pages/macbook-air-11-inch-repair",
+      "name": "macbook-air-11-inch-repair",
+      "writer": "bank",
+      "headline": "MacBook Air 11-inch Repair",
+      "button": "LEARN_MORE",
+      "image": "2026-10-30-macbook-air-11-inch-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": -168,
-    "playstation": 30,
-    "ipad": -178,
-    "controllers": 30,
-    "macbook": 102,
-    "xbox": 30,
-    "watch": 58,
-    "switch": 30,
-    "desktop": 66
+    "iphone": -105,
+    "playstation": 45,
+    "ipad": -120,
+    "controllers": 45,
+    "macbook": -141,
+    "xbox": 45,
+    "watch": 87,
+    "switch": 45,
+    "desktop": 99
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
