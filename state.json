@@ -83,6 +83,16 @@
       "headline": "MacBook Air 11-inch Repair",
       "button": "LEARN_MORE",
       "image": "2026-10-30-macbook-air-11-inch-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-10-30",
+      "group": "areas",
+      "page": "https://iassist.net.za/blogs/locations/apple-watch-battery-replacement-near-james-ethel-gray-park-melrose",
+      "name": "apple-watch-battery-replacement-near-james-ethel-gray-park-melrose--watch",
+      "writer": "bank",
+      "headline": "Apple Watch Battery Near Melrose",
+      "button": "LEARN_MORE",
+      "image": "2026-10-30-apple-watch-battery-near-melrose.jpg"
     }
   ],
   "credits": {
@@ -98,6 +108,7 @@
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
-    "iphone-repair-linden--iphone"
+    "iphone-repair-linden--iphone",
+    "apple-watch-battery-replacement-near-james-ethel-gray-park-melrose--watch"
   ]
 }
