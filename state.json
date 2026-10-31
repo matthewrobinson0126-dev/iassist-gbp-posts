@@ -106,6 +106,16 @@
       "headline": "iMac 21.5-inch 2013-2015 Repair",
       "button": "LEARN_MORE",
       "image": "2026-10-31-imac-21-5-inch-2013-2015-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-10-31",
+      "group": "areas",
+      "page": "https://iassist.net.za/pages/apple-repair-bedfordview",
+      "name": "apple-repair-bedfordview--ipad",
+      "writer": "bank",
+      "headline": "iPad Repairs for Bedfordview",
+      "button": "LEARN_MORE",
+      "image": "2026-10-31-ipad-repair-bedfordview.jpg"
     }
   ],
   "credits": {
@@ -122,6 +132,7 @@
   "areas_done": [
     "apple-repair-alberton--iphone",
     "iphone-repair-linden--iphone",
-    "apple-watch-battery-replacement-near-james-ethel-gray-park-melrose--watch"
+    "apple-watch-battery-replacement-near-james-ethel-gray-park-melrose--watch",
+    "apple-repair-bedfordview--ipad"
   ]
 }
