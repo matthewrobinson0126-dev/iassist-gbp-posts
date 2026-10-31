@@ -13,6 +13,9 @@
     ],
     "macbook": [
       "https://iassist.net.za/pages/macbook-air-11-inch-repair"
+    ],
+    "desktop": [
+      "https://iassist.net.za/pages/imac-21-5-inch-2013-2015-repair"
     ]
   },
   "history": [
@@ -93,18 +96,28 @@
       "headline": "Apple Watch Battery Near Melrose",
       "button": "LEARN_MORE",
       "image": "2026-10-30-apple-watch-battery-near-melrose.jpg"
+    },
+    {
+      "date": "2026-10-31",
+      "group": "desktop",
+      "page": "https://iassist.net.za/pages/imac-21-5-inch-2013-2015-repair",
+      "name": "imac-21-5-inch-2013-2015-repair",
+      "writer": "bank",
+      "headline": "iMac 21.5-inch 2013-2015 Repair",
+      "button": "LEARN_MORE",
+      "image": "2026-10-31-imac-21-5-inch-2013-2015-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": -105,
-    "playstation": 45,
-    "ipad": -120,
-    "controllers": 45,
-    "macbook": -141,
-    "xbox": 45,
-    "watch": 87,
-    "switch": 45,
-    "desktop": 99
+    "iphone": -42,
+    "playstation": 60,
+    "ipad": -62,
+    "controllers": 60,
+    "macbook": -90,
+    "xbox": 60,
+    "watch": 116,
+    "switch": 60,
+    "desktop": -162
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
