@@ -16,6 +16,9 @@
     ],
     "desktop": [
       "https://iassist.net.za/pages/imac-21-5-inch-2013-2015-repair"
+    ],
+    "watch": [
+      "https://iassist.net.za/pages/apple-watch-back-glass-repair"
     ]
   },
   "history": [
@@ -116,18 +119,28 @@
       "headline": "iPad Repairs for Bedfordview",
       "button": "LEARN_MORE",
       "image": "2026-10-31-ipad-repair-bedfordview.jpg"
+    },
+    {
+      "date": "2026-11-01",
+      "group": "watch",
+      "page": "https://iassist.net.za/pages/apple-watch-back-glass-repair",
+      "name": "apple-watch-back-glass-repair",
+      "writer": "bank",
+      "headline": "Apple Watch Back Glass Repair",
+      "button": "CALL",
+      "image": "2026-11-01-apple-watch-back-glass-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": -42,
-    "playstation": 60,
-    "ipad": -62,
-    "controllers": 60,
-    "macbook": -90,
-    "xbox": 60,
-    "watch": 116,
-    "switch": 60,
-    "desktop": -162
+    "iphone": 21,
+    "playstation": 75,
+    "ipad": -4,
+    "controllers": 75,
+    "macbook": -39,
+    "xbox": 75,
+    "watch": -149,
+    "switch": 75,
+    "desktop": -129
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
