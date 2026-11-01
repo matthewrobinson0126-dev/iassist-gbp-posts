@@ -129,6 +129,16 @@
       "headline": "Apple Watch Back Glass Repair",
       "button": "CALL",
       "image": "2026-11-01-apple-watch-back-glass-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-01",
+      "group": "areas",
+      "page": "https://iassist.net.za/pages/iphone-repair-melrose-arch",
+      "name": "iphone-repair-melrose-arch--iphone",
+      "writer": "bank",
+      "headline": "iPhone Repairs for Melrose Arch",
+      "button": "LEARN_MORE",
+      "image": "2026-11-01-iphone-repair-melrose-arch.jpg"
     }
   ],
   "credits": {
@@ -146,6 +156,7 @@
     "apple-repair-alberton--iphone",
     "iphone-repair-linden--iphone",
     "apple-watch-battery-replacement-near-james-ethel-gray-park-melrose--watch",
-    "apple-repair-bedfordview--ipad"
+    "apple-repair-bedfordview--ipad",
+    "iphone-repair-melrose-arch--iphone"
   ]
 }
