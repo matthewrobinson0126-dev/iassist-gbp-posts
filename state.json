@@ -171,6 +171,16 @@
       "headline": "iPhone 11 Repair",
       "button": "LEARN_MORE",
       "image": "2026-11-03-iphone-11-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-03",
+      "group": "areas",
+      "page": "https://iassist.net.za/pages/apple-repair-benoni",
+      "name": "apple-repair-benoni--macbook",
+      "writer": "bank",
+      "headline": "MacBook Repairs for Benoni",
+      "button": "LEARN_MORE",
+      "image": "2026-11-03-macbook-repair-benoni.jpg"
     }
   ],
   "credits": {
@@ -190,6 +200,7 @@
     "apple-watch-battery-replacement-near-james-ethel-gray-park-melrose--watch",
     "apple-repair-bedfordview--ipad",
     "iphone-repair-melrose-arch--iphone",
-    "ipad-camera-replacement-near-blubird-shopping-centre-birnam--ipad"
+    "ipad-camera-replacement-near-blubird-shopping-centre-birnam--ipad",
+    "apple-repair-benoni--macbook"
   ]
 }
