@@ -3,7 +3,8 @@
   "posted": {
     "iphone": [
       "https://iassist.net.za/pages/iphone-11-pro-repair",
-      "https://iassist.net.za/pages/iphone-11-pro-max-repair"
+      "https://iassist.net.za/pages/iphone-11-pro-max-repair",
+      "https://iassist.net.za/pages/iphone-11-repair"
     ],
     "playstation": [
       "https://iassist.net.za/pages/playstation-repairs",
@@ -160,18 +161,28 @@
       "headline": "iPad Camera Repair Near Birnam",
       "button": "LEARN_MORE",
       "image": "2026-11-02-ipad-camera-repair-near-birnam.jpg"
+    },
+    {
+      "date": "2026-11-03",
+      "group": "iphone",
+      "page": "https://iassist.net.za/pages/iphone-11-repair",
+      "name": "iphone-11-repair",
+      "writer": "bank",
+      "headline": "iPhone 11 Repair",
+      "button": "LEARN_MORE",
+      "image": "2026-11-03-iphone-11-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": 84,
-    "playstation": -204,
-    "ipad": 54,
-    "controllers": 90,
-    "macbook": 12,
-    "xbox": 90,
-    "watch": -120,
-    "switch": 90,
-    "desktop": -96
+    "iphone": -147,
+    "playstation": -189,
+    "ipad": 112,
+    "controllers": 105,
+    "macbook": 63,
+    "xbox": 105,
+    "watch": -91,
+    "switch": 105,
+    "desktop": -63
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
