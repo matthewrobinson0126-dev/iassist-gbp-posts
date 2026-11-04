@@ -192,6 +192,16 @@
       "headline": "iPad 11th Gen Repair",
       "button": "CALL",
       "image": "2026-11-04-ipad-11th-gen-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-04",
+      "group": "areas",
+      "page": "https://iassist.net.za/blogs/locations/apple-watch-screen-repair-near-gouch-cooper-park-hurlyvale",
+      "name": "apple-watch-screen-repair-near-gouch-cooper-park-hurlyvale--watch",
+      "writer": "fallback",
+      "headline": "Apple Watch Screen Repair Near Hurlyvale",
+      "button": "LEARN_MORE",
+      "image": "2026-11-04-apple-watch-screen-repair-near-hurlyvale.jpg"
     }
   ],
   "credits": {
@@ -212,6 +222,7 @@
     "apple-repair-bedfordview--ipad",
     "iphone-repair-melrose-arch--iphone",
     "ipad-camera-replacement-near-blubird-shopping-centre-birnam--ipad",
-    "apple-repair-benoni--macbook"
+    "apple-repair-benoni--macbook",
+    "apple-watch-screen-repair-near-gouch-cooper-park-hurlyvale--watch"
   ]
 }
