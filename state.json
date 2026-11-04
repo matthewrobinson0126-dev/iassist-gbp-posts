@@ -11,7 +11,8 @@
       "https://iassist.net.za/pages/ps4-blue-light-repair"
     ],
     "ipad": [
-      "https://iassist.net.za/pages/ipad-10th-gen-repair"
+      "https://iassist.net.za/pages/ipad-10th-gen-repair",
+      "https://iassist.net.za/pages/ipad-11th-gen-repair"
     ],
     "macbook": [
       "https://iassist.net.za/pages/macbook-air-11-inch-repair"
@@ -181,18 +182,28 @@
       "headline": "MacBook Repairs for Benoni",
       "button": "LEARN_MORE",
       "image": "2026-11-03-macbook-repair-benoni.jpg"
+    },
+    {
+      "date": "2026-11-04",
+      "group": "ipad",
+      "page": "https://iassist.net.za/pages/ipad-11th-gen-repair",
+      "name": "ipad-11th-gen-repair",
+      "writer": "bank",
+      "headline": "iPad 11th Gen Repair",
+      "button": "CALL",
+      "image": "2026-11-04-ipad-11th-gen-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": -147,
-    "playstation": -189,
-    "ipad": 112,
-    "controllers": 105,
-    "macbook": 63,
-    "xbox": 105,
-    "watch": -91,
-    "switch": 105,
-    "desktop": -63
+    "iphone": -84,
+    "playstation": -174,
+    "ipad": -124,
+    "controllers": 120,
+    "macbook": 114,
+    "xbox": 120,
+    "watch": -62,
+    "switch": 120,
+    "desktop": -30
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
