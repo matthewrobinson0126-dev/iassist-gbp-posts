@@ -23,6 +23,9 @@
     ],
     "watch": [
       "https://iassist.net.za/pages/apple-watch-back-glass-repair"
+    ],
+    "controllers": [
+      "https://iassist.net.za/pages/controller-repairs"
     ]
   },
   "history": [
@@ -223,18 +226,28 @@
       "headline": "iPhone Repairs for Menlyn",
       "button": "LEARN_MORE",
       "image": "2026-11-05-iphone-repair-menlyn.jpg"
+    },
+    {
+      "date": "2026-11-06",
+      "group": "controllers",
+      "page": "https://iassist.net.za/pages/controller-repairs",
+      "name": "controller-repairs",
+      "writer": "bank",
+      "headline": "Controller Repairs",
+      "button": "LEARN_MORE",
+      "image": "2026-11-06-controller-repairs-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": -21,
-    "playstation": -159,
-    "ipad": -66,
-    "controllers": 135,
-    "macbook": -129,
-    "xbox": 135,
-    "watch": -33,
-    "switch": 135,
-    "desktop": 3
+    "iphone": 42,
+    "playstation": -144,
+    "ipad": -8,
+    "controllers": -144,
+    "macbook": -78,
+    "xbox": 150,
+    "watch": -4,
+    "switch": 150,
+    "desktop": 36
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
