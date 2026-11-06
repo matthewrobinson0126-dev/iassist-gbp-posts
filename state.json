@@ -236,6 +236,16 @@
       "headline": "Controller Repairs",
       "button": "LEARN_MORE",
       "image": "2026-11-06-controller-repairs-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-06",
+      "group": "areas",
+      "page": "https://iassist.net.za/pages/apple-repair-beyers-park",
+      "name": "apple-repair-beyers-park--watch",
+      "writer": "bank",
+      "headline": "Apple Watch Repairs for Beyers Park",
+      "button": "LEARN_MORE",
+      "image": "2026-11-06-apple-watch-repair-beyers-park.jpg"
     }
   ],
   "credits": {
@@ -258,6 +268,7 @@
     "ipad-camera-replacement-near-blubird-shopping-centre-birnam--ipad",
     "apple-repair-benoni--macbook",
     "apple-watch-screen-repair-near-gouch-cooper-park-hurlyvale--watch",
-    "iphone-repair-menlyn--iphone"
+    "iphone-repair-menlyn--iphone",
+    "apple-repair-beyers-park--watch"
   ]
 }
