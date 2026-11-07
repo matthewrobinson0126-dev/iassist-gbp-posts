@@ -259,6 +259,16 @@
       "headline": "Xbox One Hard Drive Replacement",
       "button": "CALL",
       "image": "2026-11-07-xbox-one-hard-drive-replacement-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-07",
+      "group": "areas",
+      "page": "https://iassist.net.za/pages/iphone-repair-meyersdal",
+      "name": "iphone-repair-meyersdal--iphone",
+      "writer": "bank",
+      "headline": "iPhone Repairs for Meyersdal",
+      "button": "LEARN_MORE",
+      "image": "2026-11-07-iphone-repair-meyersdal.jpg"
     }
   ],
   "credits": {
@@ -282,6 +292,7 @@
     "apple-repair-benoni--macbook",
     "apple-watch-screen-repair-near-gouch-cooper-park-hurlyvale--watch",
     "iphone-repair-menlyn--iphone",
-    "apple-repair-beyers-park--watch"
+    "apple-repair-beyers-park--watch",
+    "iphone-repair-meyersdal--iphone"
   ]
 }
