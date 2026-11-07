@@ -26,6 +26,9 @@
     ],
     "controllers": [
       "https://iassist.net.za/pages/controller-repairs"
+    ],
+    "xbox": [
+      "https://iassist.net.za/pages/xbox-one-hard-drive-repair"
     ]
   },
   "history": [
@@ -246,18 +249,28 @@
       "headline": "Apple Watch Repairs for Beyers Park",
       "button": "LEARN_MORE",
       "image": "2026-11-06-apple-watch-repair-beyers-park.jpg"
+    },
+    {
+      "date": "2026-11-07",
+      "group": "xbox",
+      "page": "https://iassist.net.za/pages/xbox-one-hard-drive-repair",
+      "name": "xbox-one-hard-drive-repair",
+      "writer": "bank",
+      "headline": "Xbox One Hard Drive Replacement",
+      "button": "CALL",
+      "image": "2026-11-07-xbox-one-hard-drive-replacement-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": 42,
-    "playstation": -144,
-    "ipad": -8,
-    "controllers": -144,
-    "macbook": -78,
-    "xbox": 150,
-    "watch": -4,
-    "switch": 150,
-    "desktop": 36
+    "iphone": 105,
+    "playstation": -129,
+    "ipad": 50,
+    "controllers": -129,
+    "macbook": -27,
+    "xbox": -129,
+    "watch": 25,
+    "switch": 165,
+    "desktop": 69
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
