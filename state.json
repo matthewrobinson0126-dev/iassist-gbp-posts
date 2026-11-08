@@ -29,6 +29,9 @@
     ],
     "xbox": [
       "https://iassist.net.za/pages/xbox-one-hard-drive-repair"
+    ],
+    "switch": [
+      "https://iassist.net.za/pages/nintendo-switch-repairs"
     ]
   },
   "history": [
@@ -269,18 +272,28 @@
       "headline": "iPhone Repairs for Meyersdal",
       "button": "LEARN_MORE",
       "image": "2026-11-07-iphone-repair-meyersdal.jpg"
+    },
+    {
+      "date": "2026-11-08",
+      "group": "switch",
+      "page": "https://iassist.net.za/pages/nintendo-switch-repairs",
+      "name": "nintendo-switch-repairs",
+      "writer": "bank",
+      "headline": "Nintendo Switch Repairs",
+      "button": "LEARN_MORE",
+      "image": "2026-11-08-nintendo-switch-repairs-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": 105,
-    "playstation": -129,
-    "ipad": 50,
-    "controllers": -129,
-    "macbook": -27,
-    "xbox": -129,
-    "watch": 25,
-    "switch": 165,
-    "desktop": 69
+    "iphone": 168,
+    "playstation": -114,
+    "ipad": 108,
+    "controllers": -114,
+    "macbook": 24,
+    "xbox": -114,
+    "watch": 54,
+    "switch": -114,
+    "desktop": 102
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
