@@ -282,6 +282,16 @@
       "headline": "Nintendo Switch Repairs",
       "button": "LEARN_MORE",
       "image": "2026-11-08-nintendo-switch-repairs-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-08",
+      "group": "areas",
+      "page": "https://iassist.net.za/blogs/locations/iphone-battery-replacement-for-customers-near-stoneridge-centre",
+      "name": "iphone-battery-replacement-for-customers-near-stoneridge-centre--iphone",
+      "writer": "bank",
+      "headline": "iPhone Battery Near Stoneridge",
+      "button": "LEARN_MORE",
+      "image": "2026-11-08-iphone-battery-near-stoneridge.jpg"
     }
   ],
   "credits": {
@@ -306,6 +316,7 @@
     "apple-watch-screen-repair-near-gouch-cooper-park-hurlyvale--watch",
     "iphone-repair-menlyn--iphone",
     "apple-repair-beyers-park--watch",
-    "iphone-repair-meyersdal--iphone"
+    "iphone-repair-meyersdal--iphone",
+    "iphone-battery-replacement-for-customers-near-stoneridge-centre--iphone"
   ]
 }
