@@ -4,7 +4,8 @@
     "iphone": [
       "https://iassist.net.za/pages/iphone-11-pro-repair",
       "https://iassist.net.za/pages/iphone-11-pro-max-repair",
-      "https://iassist.net.za/pages/iphone-11-repair"
+      "https://iassist.net.za/pages/iphone-11-repair",
+      "https://iassist.net.za/pages/iphone-12-mini-repair"
     ],
     "playstation": [
       "https://iassist.net.za/pages/playstation-repairs",
@@ -292,18 +293,28 @@
       "headline": "iPhone Battery Near Stoneridge",
       "button": "LEARN_MORE",
       "image": "2026-11-08-iphone-battery-near-stoneridge.jpg"
+    },
+    {
+      "date": "2026-11-09",
+      "group": "iphone",
+      "page": "https://iassist.net.za/pages/iphone-12-mini-repair",
+      "name": "iphone-12-mini-repair",
+      "writer": "bank",
+      "headline": "iPhone 12 mini Repair",
+      "button": "BOOK",
+      "image": "2026-11-09-iphone-12-mini-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": 168,
-    "playstation": -114,
-    "ipad": 108,
-    "controllers": -114,
-    "macbook": 24,
-    "xbox": -114,
-    "watch": 54,
-    "switch": -114,
-    "desktop": 102
+    "iphone": -63,
+    "playstation": -99,
+    "ipad": 166,
+    "controllers": -99,
+    "macbook": 75,
+    "xbox": -99,
+    "watch": 83,
+    "switch": -99,
+    "desktop": 135
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
