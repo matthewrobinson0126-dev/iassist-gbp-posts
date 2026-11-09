@@ -303,6 +303,16 @@
       "headline": "iPhone 12 mini Repair",
       "button": "BOOK",
       "image": "2026-11-09-iphone-12-mini-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-09",
+      "group": "areas",
+      "page": "https://iassist.net.za/pages/apple-repair-boksburg",
+      "name": "apple-repair-boksburg--desktop",
+      "writer": "bank",
+      "headline": "iMac & Mac mini Repairs for Boksburg",
+      "button": "LEARN_MORE",
+      "image": "2026-11-09-imac-and-mac-mini-repair-boksburg.jpg"
     }
   ],
   "credits": {
@@ -328,6 +338,7 @@
     "iphone-repair-menlyn--iphone",
     "apple-repair-beyers-park--watch",
     "iphone-repair-meyersdal--iphone",
-    "iphone-battery-replacement-for-customers-near-stoneridge-centre--iphone"
+    "iphone-battery-replacement-for-customers-near-stoneridge-centre--iphone",
+    "apple-repair-boksburg--desktop"
   ]
 }
