@@ -324,6 +324,16 @@
       "headline": "iPad 5th Gen Repair",
       "button": "CALL",
       "image": "2026-11-10-ipad-5th-gen-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-10",
+      "group": "areas",
+      "page": "https://iassist.net.za/pages/iphone-repair-midrand",
+      "name": "iphone-repair-midrand--iphone",
+      "writer": "bank",
+      "headline": "iPhone Repairs for Midrand",
+      "button": "LEARN_MORE",
+      "image": "2026-11-10-iphone-repair-midrand.jpg"
     }
   ],
   "credits": {
@@ -350,6 +360,7 @@
     "apple-repair-beyers-park--watch",
     "iphone-repair-meyersdal--iphone",
     "iphone-battery-replacement-for-customers-near-stoneridge-centre--iphone",
-    "apple-repair-boksburg--desktop"
+    "apple-repair-boksburg--desktop",
+    "iphone-repair-midrand--iphone"
   ]
 }
