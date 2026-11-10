@@ -13,7 +13,8 @@
     ],
     "ipad": [
       "https://iassist.net.za/pages/ipad-10th-gen-repair",
-      "https://iassist.net.za/pages/ipad-11th-gen-repair"
+      "https://iassist.net.za/pages/ipad-11th-gen-repair",
+      "https://iassist.net.za/pages/ipad-5th-gen-repair"
     ],
     "macbook": [
       "https://iassist.net.za/pages/macbook-air-11-inch-repair",
@@ -313,18 +314,28 @@
       "headline": "iMac & Mac mini Repairs for Boksburg",
       "button": "LEARN_MORE",
       "image": "2026-11-09-imac-and-mac-mini-repair-boksburg.jpg"
+    },
+    {
+      "date": "2026-11-10",
+      "group": "ipad",
+      "page": "https://iassist.net.za/pages/ipad-5th-gen-repair",
+      "name": "ipad-5th-gen-repair",
+      "writer": "bank",
+      "headline": "iPad 5th Gen Repair",
+      "button": "CALL",
+      "image": "2026-11-10-ipad-5th-gen-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": -63,
-    "playstation": -99,
-    "ipad": 166,
-    "controllers": -99,
-    "macbook": 75,
-    "xbox": -99,
-    "watch": 83,
-    "switch": -99,
-    "desktop": 135
+    "iphone": 0,
+    "playstation": -84,
+    "ipad": -70,
+    "controllers": -84,
+    "macbook": 126,
+    "xbox": -84,
+    "watch": 112,
+    "switch": -84,
+    "desktop": 168
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
