@@ -21,7 +21,8 @@
       "https://iassist.net.za/pages/macbook-air-audio-jack-io-board-repair"
     ],
     "desktop": [
-      "https://iassist.net.za/pages/imac-21-5-inch-2013-2015-repair"
+      "https://iassist.net.za/pages/imac-21-5-inch-2013-2015-repair",
+      "https://iassist.net.za/pages/imac-21-5-inch-2017-2019-repair"
     ],
     "watch": [
       "https://iassist.net.za/pages/apple-watch-back-glass-repair"
@@ -334,18 +335,28 @@
       "headline": "iPhone Repairs for Midrand",
       "button": "LEARN_MORE",
       "image": "2026-11-10-iphone-repair-midrand.jpg"
+    },
+    {
+      "date": "2026-11-11",
+      "group": "desktop",
+      "page": "https://iassist.net.za/pages/imac-21-5-inch-2017-2019-repair",
+      "name": "imac-21-5-inch-2017-2019-repair",
+      "writer": "bank",
+      "headline": "iMac 21.5-inch 4K Repair",
+      "button": "LEARN_MORE",
+      "image": "2026-11-11-imac-21-5-inch-4k-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": 0,
-    "playstation": -84,
-    "ipad": -70,
-    "controllers": -84,
-    "macbook": 126,
-    "xbox": -84,
-    "watch": 112,
-    "switch": -84,
-    "desktop": 168
+    "iphone": 63,
+    "playstation": -69,
+    "ipad": -12,
+    "controllers": -69,
+    "macbook": 177,
+    "xbox": -69,
+    "watch": 141,
+    "switch": -69,
+    "desktop": -93
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
