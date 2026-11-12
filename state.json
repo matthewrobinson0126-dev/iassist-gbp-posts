@@ -18,7 +18,8 @@
     ],
     "macbook": [
       "https://iassist.net.za/pages/macbook-air-11-inch-repair",
-      "https://iassist.net.za/pages/macbook-air-audio-jack-io-board-repair"
+      "https://iassist.net.za/pages/macbook-air-audio-jack-io-board-repair",
+      "https://iassist.net.za/pages/macbook-air-battery-replacement"
     ],
     "desktop": [
       "https://iassist.net.za/pages/imac-21-5-inch-2013-2015-repair",
@@ -355,18 +356,28 @@
       "headline": "iPhone Battery Near Melrose Arch",
       "button": "LEARN_MORE",
       "image": "2026-11-11-iphone-battery-near-melrose-arch.jpg"
+    },
+    {
+      "date": "2026-11-12",
+      "group": "macbook",
+      "page": "https://iassist.net.za/pages/macbook-air-battery-replacement",
+      "name": "macbook-air-battery-replacement",
+      "writer": "bank",
+      "headline": "MacBook Air Battery Replacement",
+      "button": "LEARN_MORE",
+      "image": "2026-11-12-macbook-air-battery-replacement-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": 63,
-    "playstation": -69,
-    "ipad": -12,
-    "controllers": -69,
-    "macbook": 177,
-    "xbox": -69,
-    "watch": 141,
-    "switch": -69,
-    "desktop": -93
+    "iphone": 126,
+    "playstation": -54,
+    "ipad": 46,
+    "controllers": -54,
+    "macbook": -66,
+    "xbox": -54,
+    "watch": 170,
+    "switch": -54,
+    "desktop": -60
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
