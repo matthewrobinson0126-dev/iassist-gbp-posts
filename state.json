@@ -26,7 +26,8 @@
       "https://iassist.net.za/pages/imac-21-5-inch-2017-2019-repair"
     ],
     "watch": [
-      "https://iassist.net.za/pages/apple-watch-back-glass-repair"
+      "https://iassist.net.za/pages/apple-watch-back-glass-repair",
+      "https://iassist.net.za/pages/apple-watch-band-repair"
     ],
     "controllers": [
       "https://iassist.net.za/pages/controller-repairs"
@@ -376,18 +377,28 @@
       "headline": "Apple Watch Battery Near Boston City Campus",
       "button": "LEARN_MORE",
       "image": "2026-11-12-apple-watch-battery-near-boston-city-campus.jpg"
+    },
+    {
+      "date": "2026-11-13",
+      "group": "watch",
+      "page": "https://iassist.net.za/pages/apple-watch-band-repair",
+      "name": "apple-watch-band-repair",
+      "writer": "bank",
+      "headline": "Apple Watch Band Lug Repair",
+      "button": "CALL",
+      "image": "2026-11-13-apple-watch-band-lug-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": 126,
-    "playstation": -54,
-    "ipad": 46,
-    "controllers": -54,
-    "macbook": -66,
-    "xbox": -54,
-    "watch": 170,
-    "switch": -54,
-    "desktop": -60
+    "iphone": 189,
+    "playstation": -39,
+    "ipad": 104,
+    "controllers": -39,
+    "macbook": -15,
+    "xbox": -39,
+    "watch": -95,
+    "switch": -39,
+    "desktop": -27
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
