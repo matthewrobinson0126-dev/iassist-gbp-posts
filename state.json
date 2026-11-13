@@ -387,6 +387,16 @@
       "headline": "Apple Watch Band Lug Repair",
       "button": "CALL",
       "image": "2026-11-13-apple-watch-band-lug-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-13",
+      "group": "areas",
+      "page": "https://iassist.net.za/blogs/locations/apple-watch-repair-near-bedford-centre-oriel",
+      "name": "apple-watch-repair-near-bedford-centre-oriel--watch",
+      "writer": "fallback",
+      "headline": "Apple Watch Repair Near Bedford Centre, Oriel",
+      "button": "LEARN_MORE",
+      "image": "2026-11-13-apple-watch-repair-near-bedford-centre-oriel.jpg"
     }
   ],
   "credits": {
@@ -416,6 +426,7 @@
     "apple-repair-boksburg--desktop",
     "iphone-repair-midrand--iphone",
     "iphone-battery-replacement-near-melrose-arch-melrose-north--iphone",
-    "apple-watch-battery-replacement-near-boston-city-campus-parkmore--watch"
+    "apple-watch-battery-replacement-near-boston-city-campus-parkmore--watch",
+    "apple-watch-repair-near-bedford-centre-oriel--watch"
   ]
 }
