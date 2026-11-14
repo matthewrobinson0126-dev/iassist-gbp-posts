@@ -408,6 +408,16 @@
       "headline": "iPhone 12 Pro Max Repair",
       "button": "LEARN_MORE",
       "image": "2026-11-14-iphone-12-pro-max-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-14",
+      "group": "areas",
+      "page": "https://iassist.net.za/blogs/locations/imac-repair-near-national-health-laboratory-service-sandringham",
+      "name": "imac-repair-near-national-health-laboratory-service-sandringham--desktop",
+      "writer": "fallback",
+      "headline": "iMac Repair Near NHLS, Sandringham",
+      "button": "LEARN_MORE",
+      "image": "2026-11-14-imac-repair-near-nhls-sandringham.jpg"
     }
   ],
   "credits": {
@@ -438,6 +448,7 @@
     "iphone-repair-midrand--iphone",
     "iphone-battery-replacement-near-melrose-arch-melrose-north--iphone",
     "apple-watch-battery-replacement-near-boston-city-campus-parkmore--watch",
-    "apple-watch-repair-near-bedford-centre-oriel--watch"
+    "apple-watch-repair-near-bedford-centre-oriel--watch",
+    "imac-repair-near-national-health-laboratory-service-sandringham--desktop"
   ]
 }
