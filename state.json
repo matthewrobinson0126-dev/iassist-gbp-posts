@@ -429,6 +429,16 @@
       "headline": "iPad 6th Gen Repair",
       "button": "LEARN_MORE",
       "image": "2026-11-15-ipad-6th-gen-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-15",
+      "group": "areas",
+      "page": "https://iassist.net.za/pages/apple-repair-brooklyn-waterkloof",
+      "name": "apple-repair-brooklyn-waterkloof--iphone",
+      "writer": "bank",
+      "headline": "iPhone Repairs for Waterkloof",
+      "button": "LEARN_MORE",
+      "image": "2026-11-15-iphone-repair-brooklyn-waterkloof.jpg"
     }
   ],
   "credits": {
@@ -460,6 +470,7 @@
     "iphone-battery-replacement-near-melrose-arch-melrose-north--iphone",
     "apple-watch-battery-replacement-near-boston-city-campus-parkmore--watch",
     "apple-watch-repair-near-bedford-centre-oriel--watch",
-    "imac-repair-near-national-health-laboratory-service-sandringham--desktop"
+    "imac-repair-near-national-health-laboratory-service-sandringham--desktop",
+    "apple-repair-brooklyn-waterkloof--iphone"
   ]
 }
