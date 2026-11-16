@@ -21,7 +21,8 @@
     "macbook": [
       "https://iassist.net.za/pages/macbook-air-11-inch-repair",
       "https://iassist.net.za/pages/macbook-air-audio-jack-io-board-repair",
-      "https://iassist.net.za/pages/macbook-air-battery-replacement"
+      "https://iassist.net.za/pages/macbook-air-battery-replacement",
+      "https://iassist.net.za/pages/macbook-air-charging-port-repair"
     ],
     "desktop": [
       "https://iassist.net.za/pages/imac-21-5-inch-2013-2015-repair",
@@ -439,18 +440,28 @@
       "headline": "iPhone Repairs for Waterkloof",
       "button": "LEARN_MORE",
       "image": "2026-11-15-iphone-repair-brooklyn-waterkloof.jpg"
+    },
+    {
+      "date": "2026-11-16",
+      "group": "macbook",
+      "page": "https://iassist.net.za/pages/macbook-air-charging-port-repair",
+      "name": "macbook-air-charging-port-repair",
+      "writer": "bank",
+      "headline": "MacBook Air Charging Port Repair",
+      "button": "BOOK",
+      "image": "2026-11-16-macbook-air-charging-port-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": 21,
-    "playstation": -9,
-    "ipad": -74,
-    "controllers": -9,
-    "macbook": 87,
-    "xbox": -9,
-    "watch": -37,
-    "switch": -9,
-    "desktop": 39
+    "iphone": 84,
+    "playstation": 6,
+    "ipad": -16,
+    "controllers": 6,
+    "macbook": -156,
+    "xbox": 6,
+    "watch": -8,
+    "switch": 6,
+    "desktop": 72
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
