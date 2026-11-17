@@ -471,6 +471,16 @@
       "headline": "iPhone 12 Pro Repair",
       "button": "LEARN_MORE",
       "image": "2026-11-17-iphone-12-pro-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-17",
+      "group": "areas",
+      "page": "https://iassist.net.za/pages/iphone-repair-modderfontein",
+      "name": "iphone-repair-modderfontein--iphone",
+      "writer": "bank",
+      "headline": "iPhone Repairs for Modderfontein",
+      "button": "LEARN_MORE",
+      "image": "2026-11-17-iphone-repair-modderfontein.jpg"
     }
   ],
   "credits": {
@@ -504,6 +514,7 @@
     "apple-watch-repair-near-bedford-centre-oriel--watch",
     "imac-repair-near-national-health-laboratory-service-sandringham--desktop",
     "apple-repair-brooklyn-waterkloof--iphone",
-    "apple-watch-charging-repair-near-mediclinic-morningside-benmore-gardens--watch"
+    "apple-watch-charging-repair-near-mediclinic-morningside-benmore-gardens--watch",
+    "iphone-repair-modderfontein--iphone"
   ]
 }
