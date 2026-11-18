@@ -492,6 +492,16 @@
       "headline": "iMac 24-inch M-Series Repair",
       "button": "LEARN_MORE",
       "image": "2026-11-18-imac-24-inch-m-series-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-18",
+      "group": "areas",
+      "page": "https://iassist.net.za/pages/apple-repair-bryanston",
+      "name": "apple-repair-bryanston--ipad",
+      "writer": "bank",
+      "headline": "iPad Repairs for Bryanston",
+      "button": "LEARN_MORE",
+      "image": "2026-11-18-ipad-repair-bryanston.jpg"
     }
   ],
   "credits": {
@@ -526,6 +536,7 @@
     "imac-repair-near-national-health-laboratory-service-sandringham--desktop",
     "apple-repair-brooklyn-waterkloof--iphone",
     "apple-watch-charging-repair-near-mediclinic-morningside-benmore-gardens--watch",
-    "iphone-repair-modderfontein--iphone"
+    "iphone-repair-modderfontein--iphone",
+    "apple-repair-bryanston--ipad"
   ]
 }
