@@ -27,7 +27,8 @@
     ],
     "desktop": [
       "https://iassist.net.za/pages/imac-21-5-inch-2013-2015-repair",
-      "https://iassist.net.za/pages/imac-21-5-inch-2017-2019-repair"
+      "https://iassist.net.za/pages/imac-21-5-inch-2017-2019-repair",
+      "https://iassist.net.za/pages/imac-24-inch-m-series-repair"
     ],
     "watch": [
       "https://iassist.net.za/pages/apple-watch-back-glass-repair",
@@ -481,18 +482,28 @@
       "headline": "iPhone Repairs for Modderfontein",
       "button": "LEARN_MORE",
       "image": "2026-11-17-iphone-repair-modderfontein.jpg"
+    },
+    {
+      "date": "2026-11-18",
+      "group": "desktop",
+      "page": "https://iassist.net.za/pages/imac-24-inch-m-series-repair",
+      "name": "imac-24-inch-m-series-repair",
+      "writer": "bank",
+      "headline": "iMac 24-inch M-Series Repair",
+      "button": "LEARN_MORE",
+      "image": "2026-11-18-imac-24-inch-m-series-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": -147,
-    "playstation": 21,
-    "ipad": 42,
-    "controllers": 21,
-    "macbook": -105,
-    "xbox": 21,
-    "watch": 21,
-    "switch": 21,
-    "desktop": 105
+    "iphone": -84,
+    "playstation": 36,
+    "ipad": 100,
+    "controllers": 36,
+    "macbook": -54,
+    "xbox": 36,
+    "watch": 50,
+    "switch": 36,
+    "desktop": -156
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
