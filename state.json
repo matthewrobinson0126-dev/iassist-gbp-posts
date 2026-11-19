@@ -513,6 +513,16 @@
       "headline": "iPad 7th Gen Repair",
       "button": "CALL",
       "image": "2026-11-19-ipad-7th-gen-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-19",
+      "group": "areas",
+      "page": "https://iassist.net.za/blogs/locations/apple-watch-speaker-repair-near-morningside-shopping-centre-morningside",
+      "name": "apple-watch-speaker-repair-near-morningside-shopping-centre-morningside--watch",
+      "writer": "fallback",
+      "headline": "Apple Watch Speaker Repair Near Morningside",
+      "button": "LEARN_MORE",
+      "image": "2026-11-19-apple-watch-speaker-repair-near-morningside.jpg"
     }
   ],
   "credits": {
@@ -548,6 +558,7 @@
     "apple-repair-brooklyn-waterkloof--iphone",
     "apple-watch-charging-repair-near-mediclinic-morningside-benmore-gardens--watch",
     "iphone-repair-modderfontein--iphone",
-    "apple-repair-bryanston--ipad"
+    "apple-repair-bryanston--ipad",
+    "apple-watch-speaker-repair-near-morningside-shopping-centre-morningside--watch"
   ]
 }
