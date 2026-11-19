@@ -17,7 +17,8 @@
       "https://iassist.net.za/pages/ipad-10th-gen-repair",
       "https://iassist.net.za/pages/ipad-11th-gen-repair",
       "https://iassist.net.za/pages/ipad-5th-gen-repair",
-      "https://iassist.net.za/pages/ipad-6th-gen-repair"
+      "https://iassist.net.za/pages/ipad-6th-gen-repair",
+      "https://iassist.net.za/pages/ipad-7th-gen-repair"
     ],
     "macbook": [
       "https://iassist.net.za/pages/macbook-air-11-inch-repair",
@@ -502,18 +503,28 @@
       "headline": "iPad Repairs for Bryanston",
       "button": "LEARN_MORE",
       "image": "2026-11-18-ipad-repair-bryanston.jpg"
+    },
+    {
+      "date": "2026-11-19",
+      "group": "ipad",
+      "page": "https://iassist.net.za/pages/ipad-7th-gen-repair",
+      "name": "ipad-7th-gen-repair",
+      "writer": "bank",
+      "headline": "iPad 7th Gen Repair",
+      "button": "CALL",
+      "image": "2026-11-19-ipad-7th-gen-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": -84,
-    "playstation": 36,
-    "ipad": 100,
-    "controllers": 36,
-    "macbook": -54,
-    "xbox": 36,
-    "watch": 50,
-    "switch": 36,
-    "desktop": -156
+    "iphone": -21,
+    "playstation": 51,
+    "ipad": -136,
+    "controllers": 51,
+    "macbook": -3,
+    "xbox": 51,
+    "watch": 79,
+    "switch": 51,
+    "desktop": -123
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
