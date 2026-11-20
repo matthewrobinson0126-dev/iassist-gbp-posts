@@ -33,7 +33,8 @@
     ],
     "watch": [
       "https://iassist.net.za/pages/apple-watch-back-glass-repair",
-      "https://iassist.net.za/pages/apple-watch-band-repair"
+      "https://iassist.net.za/pages/apple-watch-band-repair",
+      "https://iassist.net.za/pages/apple-watch-battery-replacement"
     ],
     "controllers": [
       "https://iassist.net.za/pages/controller-repairs"
@@ -523,18 +524,28 @@
       "headline": "Apple Watch Speaker Repair Near Morningside",
       "button": "LEARN_MORE",
       "image": "2026-11-19-apple-watch-speaker-repair-near-morningside.jpg"
+    },
+    {
+      "date": "2026-11-20",
+      "group": "watch",
+      "page": "https://iassist.net.za/pages/apple-watch-battery-replacement",
+      "name": "apple-watch-battery-replacement",
+      "writer": "bank",
+      "headline": "Apple Watch Battery Replacement",
+      "button": "LEARN_MORE",
+      "image": "2026-11-20-apple-watch-battery-replacement-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": -21,
-    "playstation": 51,
-    "ipad": -136,
-    "controllers": 51,
-    "macbook": -3,
-    "xbox": 51,
-    "watch": 79,
-    "switch": 51,
-    "desktop": -123
+    "iphone": 42,
+    "playstation": 66,
+    "ipad": -78,
+    "controllers": 66,
+    "macbook": 48,
+    "xbox": 66,
+    "watch": -186,
+    "switch": 66,
+    "desktop": -90
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
