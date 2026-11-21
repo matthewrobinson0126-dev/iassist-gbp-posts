@@ -7,7 +7,8 @@
       "https://iassist.net.za/pages/iphone-11-repair",
       "https://iassist.net.za/pages/iphone-12-mini-repair",
       "https://iassist.net.za/pages/iphone-12-pro-max-repair",
-      "https://iassist.net.za/pages/iphone-12-pro-repair"
+      "https://iassist.net.za/pages/iphone-12-pro-repair",
+      "https://iassist.net.za/pages/iphone-12-repair"
     ],
     "playstation": [
       "https://iassist.net.za/pages/playstation-repairs",
@@ -544,18 +545,28 @@
       "headline": "Apple Watch Charging Repair Near Willow Park",
       "button": "LEARN_MORE",
       "image": "2026-11-20-apple-watch-charging-repair-near-willow-park.jpg"
+    },
+    {
+      "date": "2026-11-21",
+      "group": "iphone",
+      "page": "https://iassist.net.za/pages/iphone-12-repair",
+      "name": "iphone-12-repair",
+      "writer": "bank",
+      "headline": "iPhone 12 Repair",
+      "button": "LEARN_MORE",
+      "image": "2026-11-21-iphone-12-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": 42,
-    "playstation": 66,
-    "ipad": -78,
-    "controllers": 66,
-    "macbook": 48,
-    "xbox": 66,
-    "watch": -186,
-    "switch": 66,
-    "desktop": -90
+    "iphone": -189,
+    "playstation": 81,
+    "ipad": -20,
+    "controllers": 81,
+    "macbook": 99,
+    "xbox": 81,
+    "watch": -157,
+    "switch": 81,
+    "desktop": -57
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
