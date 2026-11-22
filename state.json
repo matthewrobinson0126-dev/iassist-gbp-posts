@@ -25,7 +25,8 @@
       "https://iassist.net.za/pages/macbook-air-11-inch-repair",
       "https://iassist.net.za/pages/macbook-air-audio-jack-io-board-repair",
       "https://iassist.net.za/pages/macbook-air-battery-replacement",
-      "https://iassist.net.za/pages/macbook-air-charging-port-repair"
+      "https://iassist.net.za/pages/macbook-air-charging-port-repair",
+      "https://iassist.net.za/pages/macbook-air-data-recovery"
     ],
     "desktop": [
       "https://iassist.net.za/pages/imac-21-5-inch-2013-2015-repair",
@@ -565,18 +566,28 @@
       "headline": "Apple Watch Battery Near Alexander Park, Denver",
       "button": "LEARN_MORE",
       "image": "2026-11-21-apple-watch-battery-near-alexander-park-denver.jpg"
+    },
+    {
+      "date": "2026-11-22",
+      "group": "macbook",
+      "page": "https://iassist.net.za/pages/macbook-air-data-recovery",
+      "name": "macbook-air-data-recovery",
+      "writer": "bank",
+      "headline": "MacBook Air Data Recovery",
+      "button": "CALL",
+      "image": "2026-11-22-macbook-air-data-recovery-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": -189,
-    "playstation": 81,
-    "ipad": -20,
-    "controllers": 81,
-    "macbook": 99,
-    "xbox": 81,
-    "watch": -157,
-    "switch": 81,
-    "desktop": -57
+    "iphone": -126,
+    "playstation": 96,
+    "ipad": 38,
+    "controllers": 96,
+    "macbook": -144,
+    "xbox": 96,
+    "watch": -128,
+    "switch": 96,
+    "desktop": -24
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
