@@ -597,6 +597,16 @@
       "headline": "PS4 Disc Drive Repair",
       "button": "BOOK",
       "image": "2026-11-23-ps4-disc-drive-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-23",
+      "group": "areas",
+      "page": "https://iassist.net.za/pages/apple-repair-centurion-central",
+      "name": "apple-repair-centurion-central--macbook",
+      "writer": "bank",
+      "headline": "MacBook Repairs for Centurion",
+      "button": "LEARN_MORE",
+      "image": "2026-11-23-macbook-repair-centurion-central.jpg"
     }
   ],
   "credits": {
@@ -636,6 +646,7 @@
     "apple-watch-speaker-repair-near-morningside-shopping-centre-morningside--watch",
     "apple-watch-charging-repair-near-willow-park-dowerglen--watch",
     "apple-watch-battery-replacement-near-alexander-park-denver--watch",
-    "iphone-repair-montana--iphone"
+    "iphone-repair-montana--iphone",
+    "apple-repair-centurion-central--macbook"
   ]
 }
