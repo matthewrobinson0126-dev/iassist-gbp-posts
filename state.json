@@ -12,7 +12,8 @@
     ],
     "playstation": [
       "https://iassist.net.za/pages/playstation-repairs",
-      "https://iassist.net.za/pages/ps4-blue-light-repair"
+      "https://iassist.net.za/pages/ps4-blue-light-repair",
+      "https://iassist.net.za/pages/ps4-disc-drive-repair"
     ],
     "ipad": [
       "https://iassist.net.za/pages/ipad-10th-gen-repair",
@@ -586,18 +587,28 @@
       "headline": "iPhone Repairs for Montana",
       "button": "LEARN_MORE",
       "image": "2026-11-22-iphone-repair-montana.jpg"
+    },
+    {
+      "date": "2026-11-23",
+      "group": "playstation",
+      "page": "https://iassist.net.za/pages/ps4-disc-drive-repair",
+      "name": "ps4-disc-drive-repair",
+      "writer": "bank",
+      "headline": "PS4 Disc Drive Repair",
+      "button": "BOOK",
+      "image": "2026-11-23-ps4-disc-drive-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": -126,
-    "playstation": 96,
-    "ipad": 38,
-    "controllers": 96,
-    "macbook": -144,
-    "xbox": 96,
-    "watch": -128,
-    "switch": 96,
-    "desktop": -24
+    "iphone": -63,
+    "playstation": -183,
+    "ipad": 96,
+    "controllers": 111,
+    "macbook": -93,
+    "xbox": 111,
+    "watch": -99,
+    "switch": 111,
+    "desktop": 9
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
