@@ -20,7 +20,8 @@
       "https://iassist.net.za/pages/ipad-11th-gen-repair",
       "https://iassist.net.za/pages/ipad-5th-gen-repair",
       "https://iassist.net.za/pages/ipad-6th-gen-repair",
-      "https://iassist.net.za/pages/ipad-7th-gen-repair"
+      "https://iassist.net.za/pages/ipad-7th-gen-repair",
+      "https://iassist.net.za/pages/ipad-8th-gen-repair"
     ],
     "macbook": [
       "https://iassist.net.za/pages/macbook-air-11-inch-repair",
@@ -607,18 +608,28 @@
       "headline": "MacBook Repairs for Centurion",
       "button": "LEARN_MORE",
       "image": "2026-11-23-macbook-repair-centurion-central.jpg"
+    },
+    {
+      "date": "2026-11-24",
+      "group": "ipad",
+      "page": "https://iassist.net.za/pages/ipad-8th-gen-repair",
+      "name": "ipad-8th-gen-repair",
+      "writer": "bank",
+      "headline": "iPad 8th Gen Repair",
+      "button": "LEARN_MORE",
+      "image": "2026-11-24-ipad-8th-gen-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": -63,
-    "playstation": -183,
-    "ipad": 96,
-    "controllers": 111,
-    "macbook": -93,
-    "xbox": 111,
-    "watch": -99,
-    "switch": 111,
-    "desktop": 9
+    "iphone": 0,
+    "playstation": -168,
+    "ipad": -140,
+    "controllers": 126,
+    "macbook": -42,
+    "xbox": 126,
+    "watch": -70,
+    "switch": 126,
+    "desktop": 42
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
