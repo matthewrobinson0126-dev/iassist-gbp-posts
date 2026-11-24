@@ -618,6 +618,16 @@
       "headline": "iPad 8th Gen Repair",
       "button": "LEARN_MORE",
       "image": "2026-11-24-ipad-8th-gen-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-24",
+      "group": "areas",
+      "page": "https://iassist.net.za/blogs/locations/apple-watch-charging-repair-near-covid-testing-drive-through-dunkeld",
+      "name": "apple-watch-charging-repair-near-covid-testing-drive-through-dunkeld--watch",
+      "writer": "fallback",
+      "headline": "Apple Watch Charging Repair, Dunkeld",
+      "button": "LEARN_MORE",
+      "image": "2026-11-24-apple-watch-charging-repair-dunkeld.jpg"
     }
   ],
   "credits": {
@@ -658,6 +668,7 @@
     "apple-watch-charging-repair-near-willow-park-dowerglen--watch",
     "apple-watch-battery-replacement-near-alexander-park-denver--watch",
     "iphone-repair-montana--iphone",
-    "apple-repair-centurion-central--macbook"
+    "apple-repair-centurion-central--macbook",
+    "apple-watch-charging-repair-near-covid-testing-drive-through-dunkeld--watch"
   ]
 }
