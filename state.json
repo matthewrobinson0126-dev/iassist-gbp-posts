@@ -41,7 +41,8 @@
       "https://iassist.net.za/pages/apple-watch-battery-replacement"
     ],
     "controllers": [
-      "https://iassist.net.za/pages/controller-repairs"
+      "https://iassist.net.za/pages/controller-repairs",
+      "https://iassist.net.za/pages/joy-con-drift-repair"
     ],
     "xbox": [
       "https://iassist.net.za/pages/xbox-one-hard-drive-repair"
@@ -628,18 +629,28 @@
       "headline": "Apple Watch Charging Repair, Dunkeld",
       "button": "LEARN_MORE",
       "image": "2026-11-24-apple-watch-charging-repair-dunkeld.jpg"
+    },
+    {
+      "date": "2026-11-25",
+      "group": "controllers",
+      "page": "https://iassist.net.za/pages/joy-con-drift-repair",
+      "name": "joy-con-drift-repair",
+      "writer": "bank",
+      "headline": "Joy-Con Drift Repair",
+      "button": "CALL",
+      "image": "2026-11-25-joy-con-drift-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": 0,
-    "playstation": -168,
-    "ipad": -140,
-    "controllers": 126,
-    "macbook": -42,
-    "xbox": 126,
-    "watch": -70,
-    "switch": 126,
-    "desktop": 42
+    "iphone": 63,
+    "playstation": -153,
+    "ipad": -82,
+    "controllers": -153,
+    "macbook": 9,
+    "xbox": 141,
+    "watch": -41,
+    "switch": 141,
+    "desktop": 75
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
