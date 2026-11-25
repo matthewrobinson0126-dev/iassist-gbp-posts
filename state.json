@@ -639,6 +639,16 @@
       "headline": "Joy-Con Drift Repair",
       "button": "CALL",
       "image": "2026-11-25-joy-con-drift-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-25",
+      "group": "areas",
+      "page": "https://iassist.net.za/pages/iphone-repair-mooikloof",
+      "name": "iphone-repair-mooikloof--iphone",
+      "writer": "bank",
+      "headline": "iPhone Repairs for Mooikloof",
+      "button": "LEARN_MORE",
+      "image": "2026-11-25-iphone-repair-mooikloof.jpg"
     }
   ],
   "credits": {
@@ -680,6 +690,7 @@
     "apple-watch-battery-replacement-near-alexander-park-denver--watch",
     "iphone-repair-montana--iphone",
     "apple-repair-centurion-central--macbook",
-    "apple-watch-charging-repair-near-covid-testing-drive-through-dunkeld--watch"
+    "apple-watch-charging-repair-near-covid-testing-drive-through-dunkeld--watch",
+    "iphone-repair-mooikloof--iphone"
   ]
 }
