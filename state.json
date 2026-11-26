@@ -660,6 +660,16 @@
       "headline": "Xbox One HDMI Port Repair",
       "button": "LEARN_MORE",
       "image": "2026-11-26-xbox-one-hdmi-port-repair-johannesburg.jpg"
+    },
+    {
+      "date": "2026-11-26",
+      "group": "areas",
+      "page": "https://iassist.net.za/pages/apple-repair-constantia-kloof",
+      "name": "apple-repair-constantia-kloof--watch",
+      "writer": "bank",
+      "headline": "Apple Watch Repairs for Constantia Kloof",
+      "button": "LEARN_MORE",
+      "image": "2026-11-26-apple-watch-repair-constantia-kloof.jpg"
     }
   ],
   "credits": {
@@ -702,6 +712,7 @@
     "iphone-repair-montana--iphone",
     "apple-repair-centurion-central--macbook",
     "apple-watch-charging-repair-near-covid-testing-drive-through-dunkeld--watch",
-    "iphone-repair-mooikloof--iphone"
+    "iphone-repair-mooikloof--iphone",
+    "apple-repair-constantia-kloof--watch"
   ]
 }
