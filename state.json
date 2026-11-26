@@ -45,7 +45,8 @@
       "https://iassist.net.za/pages/joy-con-drift-repair"
     ],
     "xbox": [
-      "https://iassist.net.za/pages/xbox-one-hard-drive-repair"
+      "https://iassist.net.za/pages/xbox-one-hard-drive-repair",
+      "https://iassist.net.za/pages/xbox-one-hdmi-port-repair"
     ],
     "switch": [
       "https://iassist.net.za/pages/nintendo-switch-repairs"
@@ -649,18 +650,28 @@
       "headline": "iPhone Repairs for Mooikloof",
       "button": "LEARN_MORE",
       "image": "2026-11-25-iphone-repair-mooikloof.jpg"
+    },
+    {
+      "date": "2026-11-26",
+      "group": "xbox",
+      "page": "https://iassist.net.za/pages/xbox-one-hdmi-port-repair",
+      "name": "xbox-one-hdmi-port-repair",
+      "writer": "bank",
+      "headline": "Xbox One HDMI Port Repair",
+      "button": "LEARN_MORE",
+      "image": "2026-11-26-xbox-one-hdmi-port-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": 63,
-    "playstation": -153,
-    "ipad": -82,
-    "controllers": -153,
-    "macbook": 9,
-    "xbox": 141,
-    "watch": -41,
-    "switch": 141,
-    "desktop": 75
+    "iphone": 126,
+    "playstation": -138,
+    "ipad": -24,
+    "controllers": -138,
+    "macbook": 60,
+    "xbox": -138,
+    "watch": -12,
+    "switch": 156,
+    "desktop": 108
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
