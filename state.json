@@ -8,7 +8,8 @@
       "https://iassist.net.za/pages/iphone-12-mini-repair",
       "https://iassist.net.za/pages/iphone-12-pro-max-repair",
       "https://iassist.net.za/pages/iphone-12-pro-repair",
-      "https://iassist.net.za/pages/iphone-12-repair"
+      "https://iassist.net.za/pages/iphone-12-repair",
+      "https://iassist.net.za/pages/iphone-13-mini-repair"
     ],
     "playstation": [
       "https://iassist.net.za/pages/playstation-repairs",
@@ -670,18 +671,28 @@
       "headline": "Apple Watch Repairs for Constantia Kloof",
       "button": "LEARN_MORE",
       "image": "2026-11-26-apple-watch-repair-constantia-kloof.jpg"
+    },
+    {
+      "date": "2026-11-27",
+      "group": "iphone",
+      "page": "https://iassist.net.za/pages/iphone-13-mini-repair",
+      "name": "iphone-13-mini-repair",
+      "writer": "bank",
+      "headline": "iPhone 13 Mini Repair",
+      "button": "LEARN_MORE",
+      "image": "2026-11-27-iphone-13-mini-repair-johannesburg.jpg"
     }
   ],
   "credits": {
-    "iphone": 126,
-    "playstation": -138,
-    "ipad": -24,
-    "controllers": -138,
-    "macbook": 60,
-    "xbox": -138,
-    "watch": -12,
-    "switch": 156,
-    "desktop": 108
+    "iphone": -105,
+    "playstation": -123,
+    "ipad": 34,
+    "controllers": -123,
+    "macbook": 111,
+    "xbox": -123,
+    "watch": 17,
+    "switch": 171,
+    "desktop": 141
   },
   "areas_done": [
     "apple-repair-alberton--iphone",
